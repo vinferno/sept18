@@ -202,7 +202,7 @@ var fu_touch_end = function(event){
 		//alert('swipe left');
 		var new_text_box = document.createElement('input');
 		new_text_box.type = "text";
-		new_text_box.value=this.innerText;
+		new_text_box.value=global_target.innerText;
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
 	}
