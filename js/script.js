@@ -34,12 +34,18 @@ var loop_all = function(){
 	submit_listeners();
 };
 var fu_minus_click = function(){
+
 	var minus_list = document.getElementsByClassName('minus');
 	for (var i=0;i<minus_list.length;i++){
 		minus_list[i].addEventListener('click',function(){
-			this.parentNode.remove(this.parentNode);
+		global_target=this.parentNode;
+		global_target.classList.add('deleted');
+		document.getElementById('alert').classList.remove('hidden');
+		document.getElementById('alert').innerText = "UNDO DELETE: " + global_target.innerText.replace('-','');
+		fu_alert_box();
 		});
 	}
+
 };
 var loop_all_remove = function(){
 	for (var i= 0; i < li_list.length; i++){
@@ -235,6 +241,7 @@ var fu_touch_end = function(event){
 	}
 };
 var fu_alert_box = function(){
+	
 	var alert_interval =setInterval(function(){	 	
 		document.getElementById('alert').classList.add('hidden');
 		clearInterval(alert_interval);
