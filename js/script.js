@@ -189,14 +189,13 @@ var fu_touch_end = function(event){
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
-		global_target.classList.add('deleted');
-		document.getElementById('alert').classList.remove('hidden');
-		document.getElementById('alert').innerText = "UNDO DELETE: " + global_target.innerText.replace('-','');
-		fu_alert_box();
-		//clearInterval(alert_interval);
-		//global_target.remove(global_target);
-		//this.remove(this);	
-		//alert("touchswipe");				
+		if (global_target.classList.contains('game_list_item')){
+			global_target.classList.add('deleted');
+			document.getElementById('alert').classList.remove('hidden');
+			document.getElementById('alert').innerText = "UNDO DELETE: " + global_target.innerText.replace('-','');
+			fu_alert_box();
+		}
+				
 	}
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left')
