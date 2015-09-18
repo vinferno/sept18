@@ -230,7 +230,7 @@ var fu_touch_end = function(event){
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
 		global_target.appendChild(new_button);
-		new_button.addEventListener('click',fu_rename());
+		new_button.addEventListener('click',fu_rename);
 		}
 	}
 };
