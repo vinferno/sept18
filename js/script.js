@@ -12,6 +12,7 @@ var loop_all = function(){
 		});
 		li_list[i].addEventListener('mouseover',function(){
 			fu_hover(this);
+			alert('hover')
 		});
 		li_list[i].addEventListener('mouseleave',function(){
 			fu_mouse_leave(this);
