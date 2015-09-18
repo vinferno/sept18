@@ -132,6 +132,16 @@ var submit_listeners = function(){
 	});
 
 };
+
+var fu_rename = function(){
+	for (var i = 0; i< games.length; i++) {
+		if (games[i].children.length === 2){
+			var new_string =games[i].children[0].value;
+			games[i].innerHTML='';
+			games[i].innerText=new_string;
+		}
+	}
+};
 //////////////////////////////////swipe///////////////////////////////////////////////////
 var start_swipe = 0;
 var end_swipe = 0;
@@ -220,6 +230,7 @@ var fu_touch_end = function(event){
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
 		global_target.appendChild(new_button);
+		new_button.addEventListener('click',fu_rename());
 		}
 	}
 };
@@ -244,4 +255,7 @@ var fu_undo_check = function(target){
 		document.getElementById('alert').innerText = "UNDO SUCCESSFUL";
 	}
 };
+
+
+
 loop_all();
