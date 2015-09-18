@@ -203,8 +203,8 @@ var fu_touch_end = function(event){
 		var new_text_box = document.createElement('input');
 		new_text_box.type = "text";
 		new_text_box.value=this.innerText;
-		this.innerText = '';
-		this.appendChild(new_text_box);
+		global_target.innerText = '';
+		global_target.appendChild(new_text_box);
 	}
 };
 var fu_alert_box = function(){
