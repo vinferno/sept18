@@ -56,6 +56,9 @@ var fu_hover= function(target){
 	target.classList.add("hover");
 	make_minus(target);
 	fu_open_form(target);
+	if (li_list[0] === target){
+		target.classList.remove('hover');
+	};
 };
 
 var fu_mouse_leave= function(target){
@@ -141,7 +144,7 @@ var submit_listeners = function(){
 
 };
 
-loop_all();
+
 //////////////////////////////////swipe///////////////////////////////////////////////////
 var start_swipe = 0;
 var end_swipe = 0;
@@ -239,4 +242,5 @@ var fu_undo_check = function(target){
 	}
 };
 
+loop_all();
 //alert("version: 0.0.57");
