@@ -1,0 +1,180 @@
+* {
+   font-family: sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body{
+  margin:0;
+}
+#alert{
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+#alert_ul{
+  background-color: transparent;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#name_input_box {
+  margin: 0 0 0 40px;
+  padding: 0;
+  width: 400px;
+  height: 15px;
+}
+
+ul {
+  list-style: none;
+  width: 502px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: black;
+  padding: 1px;
+}
+
+li {
+  height: 60px;
+  width: 500px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: 700;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: all 0.3s;
+  border-radius: 3px;
+  margin:0;
+}
+
+.title {
+ color: white;
+ background-color: #434242 ;
+}
+.active {
+ color: white;
+ background-color: #434242 ;
+}
+.added {
+ color: white;
+ background-color:  #646262 ;
+}
+.hover{
+ color: white;
+ background-color: #A7A4A4 ;
+}
+.selected {
+ color: black;
+ background-color:  #D3D2D2 ;
+}
+.success {
+ color: black;
+ background-color:  #E9E8E8 ;
+}
+.error {
+ color: black;
+ background-color: #F2F1F1 ;
+}
+
+.base{
+ color: black;
+ background-color:  #D3D2D2 ;
+}
+
+.minus{
+	box-sizing:border-box;
+  text-shadow:
+   -1px -1px 0 #474747 ,  
+    1px -1px 0 #474747 ,
+    -1px 1px 0 #474747 ,
+     1px 1px 0 #474747 ;
+  padding-right: 2px;
+  line-height: 1;
+  float:left;
+  height: 80%;
+  width: 60px;
+  margin: 5px 10px;
+  font-size: 130%;
+  background-color: #b6b6b6;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.closed {
+  background-color: #818181;
+  height: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.open {
+  color:#f0f0f0;
+  background-color: #d1d1d1 ;
+  height: 145px;
+  overflow: hidden;
+  border: 2px solid black;
+  line-height: normal;
+  text-align: center;
+  padding: 10px;
+}
+
+.hidden{
+  height: 0;
+  background-color: transparent;
+}
+
+.deleted{
+ display: none;
+}
+@media screen and (max-width: 1000px){
+  ul {
+    width: 100%;
+  }
+  li {
+    width: 100%;
+    height: 100px;
+    font-size: 50px;
+    line-height: 100px;
+  }
+  .open {
+    color:#1f1f1f;
+    background-color:#efefef;
+    height: 225px;
+  }
+
+ .open:hover{
+   color:#1f1f1f;
+   background-color:#d4d4d4 ;
+ }
+
+  .open button {
+  height: 50px;
+  padding: 20px 50px;
+  font-size: 20px;
+  line-height: 10px;
+  border-radius: 10px;
+  border: 1px solid #1f1f1f;
+  }
+
+p{
+  margin:0;
+  padding:0;
+}
+#name_input_box{
+  margin:0 0 0 40px;
+  padding: 15px;
+  width: 90%;
+  height:15px;
+}
+
+
+
+}
