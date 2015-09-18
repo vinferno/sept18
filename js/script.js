@@ -214,7 +214,7 @@ var fu_touch_end = function(event){
 		if (global_target.classList.contains('game_list_item')){
 			for (var i = 0; i< games.length; i++) {
 				if (games[i].children.length === 2){
-					var new_string =games[i].children[0].value;
+					var new_string =games[i].children[0].value.toUpperCase();
 					games[i].innerHTML='';
 					games[i].innerText=new_string;
 				}
