@@ -75,7 +75,7 @@ function make_minus(target){
 	if (target.children.length<1){
 		var new_minus = document.createElement('div');
 		target.appendChild(new_minus);
-		new_minus.innerText = "-"; 
+		new_minus.innerHTML = '<div class="minus_center"></div>'; 
 		new_minus.classList.add("minus");
 	};
 	fu_minus_click();
