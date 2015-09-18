@@ -56,6 +56,9 @@ var fu_hover= function(target){
 	target.classList.add("hover");
 	make_minus(target);
 	fu_open_form(target);
+	if (li_list[0] === target){
+		target.classList.remove('hover');
+	};
 };
 
 var fu_mouse_leave= function(target){
@@ -72,7 +75,7 @@ function make_minus(target){
 	if (target.children.length<1){
 		var new_minus = document.createElement('div');
 		target.appendChild(new_minus);
-		new_minus.innerText = "-"; 
+		new_minus.innerHTML = '<div class="minus_center"></div>'; 
 		new_minus.classList.add("minus");
 	};
 	fu_minus_click();
@@ -141,7 +144,7 @@ var submit_listeners = function(){
 
 };
 
-loop_all();
+
 //////////////////////////////////swipe///////////////////////////////////////////////////
 var start_swipe = 0;
 var end_swipe = 0;
@@ -158,14 +161,14 @@ var fu_mouse_up = function(target){
 	end_swipe_y= event.clientY;
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
-			alert("crooked fingers");
-			alert(end_swipe_y - start_swipe_y);
+			//alert("crooked fingers");
+			//alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
-			alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			//alert("crooked fingers");
+			//alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
@@ -176,7 +179,7 @@ var fu_mouse_up = function(target){
 		//global_target.remove(global_target);						
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left')
+		//alert('swipe left')
 	}
 };
 		
@@ -190,14 +193,14 @@ var fu_touch_end = function(event){
 	end_swipe_y = event.changedTouches[0].pageY;
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
-			alert("crooked fingers");
-			alert(end_swipe_y - start_swipe_y);
+			//alert("crooked fingers");
+			//alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
-			alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			//alert("crooked fingers");
+			//alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
@@ -208,10 +211,10 @@ var fu_touch_end = function(event){
 		//clearInterval(alert_interval);
 		//global_target.remove(global_target);
 		//this.remove(this);	
-		alert("touchswipe");				
+		//alert("touchswipe");				
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left');
+		//alert('swipe left');
 	}
 };
 
@@ -239,4 +242,6 @@ var fu_undo_check = function(target){
 	}
 };
 
-alert("version: 0.0.57");
+loop_all();
+//
+//alert("version: 0.0.57");
