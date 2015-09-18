@@ -3,7 +3,7 @@ var li_list = document.getElementsByTagName('li');
 var games = document.getElementsByClassName('game_list_item');
 var global_target;
 
-var madeup;
+
 
 var loop_all = function(){
 	for (var i= 0; i < li_list.length; i++){
@@ -38,9 +38,9 @@ var fu_minus_click = function(){
 	for (var i=0;i<minus_list.length;i++){
 		minus_list[i].addEventListener('click',function(){
 			this.parentNode.remove(this.parentNode);
-		})
+		});
 	}
-}
+};
 var loop_all_remove = function(){
 	for (var i= 0; i < li_list.length; i++){
 		var el = li_list[i],
@@ -57,7 +57,7 @@ var fu_hover= function(target){
 	fu_open_form(target);
 	if (li_list[0] === target){
 		target.classList.remove('hover');
-	};
+	}
 };
 var fu_mouse_leave= function(target){
 	target.classList.remove("hover");
@@ -65,20 +65,20 @@ var fu_mouse_leave= function(target){
 	fu_close_form(target);
 };
 function make_minus(target){
-	if (target.id === "alert"){return;};
-	if (target.classList.contains('title') || target.classList.contains('form')){return;};
+	if (target.id === "alert"){return;}
+	if (target.classList.contains('title') || target.classList.contains('form')){return;}
 	if (target.children.length<1){
 		var new_minus = document.createElement('div');
 		target.appendChild(new_minus);
 		new_minus.innerHTML = '<div class="minus_center"></div>'; 
 		new_minus.classList.add("minus");
-	};
+	}
 	fu_minus_click();
-};
+}
 function remove_minus(target){
 	if (target.children.length==1) {
-		target.removeChild(target.children[0])
-	};
+		target.removeChild(target.children[0]);
+	}
 }
 function fu_open_form(target){
 	if (target.classList.contains('title') || target.classList.contains('form')){
@@ -92,7 +92,7 @@ function fu_close_form(target){
 	if (target.classList.contains('form')){
 		li_list[1].classList.remove('open');
 		li_list[1].classList.add('closed');			
-	};
+	}
 }
 function add_game(name_value){
    	var new_game = name_value.toUpperCase();
@@ -114,7 +114,7 @@ function add_game(name_value){
 	new_li.innerText = name_value.toUpperCase(); 
 	new_li.classList.toggle("game_list_item");
 	document.getElementById("name_input_box").blur();
-};
+}
 var submit_listeners = function(){
 	document.getElementById('add_submit_button').addEventListener('click',function(){
 		var name_value = document.getElementById("name_input_box").value;
@@ -128,7 +128,7 @@ var submit_listeners = function(){
 	document.getElementById("name_input_box").addEventListener('keydown', function(){    
         if(event.keyCode == 13) {
             document.getElementById('add_submit_button').click();       
-    	};
+    	}
 	});
 
 };
@@ -200,6 +200,7 @@ var fu_touch_end = function(event){
 	}
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left');
+		if (global_target.classList.contains('game_list_item')){
 		var new_text_box = document.createElement('input');
 		var new_button = document.createElement('button');
 		new_text_box.type = "text";
@@ -211,6 +212,7 @@ var fu_touch_end = function(event){
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
 		global_target.appendChild(new_button);
+		}
 	}
 };
 var fu_alert_box = function(){
@@ -221,7 +223,7 @@ var fu_alert_box = function(){
 			if (li_list[i].classList.contains('deleted')){
 				li_list[i].remove(li_list[i]);
 			}
-		};
+		}
 	}, 3000);
 };
 var fu_undo_check = function(target){
@@ -230,7 +232,7 @@ var fu_undo_check = function(target){
 			if (li_list[i].classList.contains('deleted')){
 				li_list[i].classList.remove('deleted');
 			}
-		};
+		}
 		document.getElementById('alert').innerText = "UNDO SUCCESSFUL";
 	}
 };
