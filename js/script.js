@@ -2,6 +2,9 @@ var game_unordered_list=document.getElementsByTagName('ul')[0];
 var li_list = document.getElementsByTagName('li');
 var games = document.getElementsByClassName('game_list_item');
 var global_target;
+
+var madeup;
+
 var loop_all = function(){
 	for (var i= 0; i < li_list.length; i++){
 		li_list[i].addEventListener('click',function(){
@@ -23,7 +26,8 @@ var loop_all = function(){
 		li_list[i].addEventListener('touchstart', function(event){ 	
 			fu_touch_start(event);
 		});
-		li_list[i].addEventListener('touchend', function(event){ 	
+		li_list[i].addEventListener('touchend', function(event){ 
+			global_target=this;
 			fu_touch_end(event);
 		});
 	}
