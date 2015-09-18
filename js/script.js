@@ -210,8 +210,7 @@ var fu_touch_end = function(event){
 		new_button.innerText = "Rename";
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
-		global_target.appendChild(new_button;);
-		
+		global_target.appendChild(new_button);
 	}
 };
 var fu_alert_box = function(){
