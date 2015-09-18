@@ -250,7 +250,7 @@ var fu_alert_box = function(){
 				li_list[i].remove(li_list[i]);
 			}
 		}
-	}, 3000);
+	}, 4000);
 };
 var fu_undo_check = function(target){
 	if (target.id === "alert"){
