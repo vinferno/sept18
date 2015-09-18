@@ -199,8 +199,13 @@ var fu_touch_end = function(event){
 		//alert("touchswipe");				
 	}
 	if (start_swipe > end_swipe + threshold){
-		//alert('swipe left');
-		if(global_target.innerText === "RENAME"){return;};
+		//alert('swipe left')
+		for (var i = 0; i<games.length;i++){
+			var new_string =games[i].innerText;
+			games[i].innerHTML='';
+			games[i].innerText=new_string;
+		}
+		if(global_target.innerText === "RENAME"){return;}
 		if (global_target.classList.contains('game_list_item')){
 		var new_text_box = document.createElement('input');
 		var new_button = document.createElement('button');
