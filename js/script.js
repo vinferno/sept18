@@ -162,13 +162,13 @@ var fu_mouse_up = function(target){
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
 			//alert("crooked fingers");
-			alert(end_swipe_y - start_swipe_y);
+			//alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
 			//alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			//alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
@@ -194,13 +194,13 @@ var fu_touch_end = function(event){
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
 			//alert("crooked fingers");
-			alert(end_swipe_y - start_swipe_y);
+			//alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
 			//alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			//alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
