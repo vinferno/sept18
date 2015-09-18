@@ -200,6 +200,11 @@ var fu_touch_end = function(event){
 	}
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left');
+		var new_text_box = document.createElement('input');
+		new_text_box.type = "text";
+		new_text_box.value=this.innerText;
+		this.innerText = '';
+		this.appendChild(new_li);
 	}
 };
 var fu_alert_box = function(){
