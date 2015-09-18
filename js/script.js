@@ -204,7 +204,7 @@ var fu_touch_end = function(event){
 		new_text_box.type = "text";
 		new_text_box.value=this.innerText;
 		this.innerText = '';
-		this.appendChild(new_li);
+		this.appendChild(new_text_box);
 	}
 };
 var fu_alert_box = function(){
