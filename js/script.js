@@ -201,7 +201,7 @@ var fu_touch_end = function(event){
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left')
 		for (var i = 0; i<games.length;i++){
-			var new_string =games[i].innerText;
+			var new_string =games[i].children[0].value;
 			games[i].innerHTML='';
 			games[i].innerText=new_string;
 		}
