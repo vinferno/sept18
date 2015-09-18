@@ -243,4 +243,5 @@ var fu_undo_check = function(target){
 };
 
 loop_all();
+//
 //alert("version: 0.0.57");
