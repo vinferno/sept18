@@ -200,7 +200,7 @@ var fu_touch_end = function(event){
 	}
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left');
-		if(global_target.innerText === "rename"){return;};
+		if(global_target.innerText === "RENAME"){return;};
 		if (global_target.classList.contains('game_list_item')){
 		var new_text_box = document.createElement('input');
 		var new_button = document.createElement('button');
@@ -209,7 +209,7 @@ var fu_touch_end = function(event){
 		new_text_box.id = "rename";
 		new_button.id = 'rename_button';
 		new_text_box.value=global_target.innerText;
-		new_button.innerText = "Rename";
+		new_button.innerText = "RENAME";
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
 		global_target.appendChild(new_button);
