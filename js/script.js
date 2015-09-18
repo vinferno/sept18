@@ -208,7 +208,7 @@ var fu_touch_end = function(event){
 		//clearInterval(alert_interval);
 		//global_target.remove(global_target);
 		//this.remove(this);	
-		alert("touchswipe");				
+		//alert("touchswipe");				
 	}
 	if (start_swipe > end_swipe + threshold){
 		alert('swipe left');
