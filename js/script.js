@@ -201,9 +201,11 @@ var fu_touch_end = function(event){
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left')
 		for (var i = 0; i<games.length;i++){
-			var new_string =games[i].children[0].value;
-			games[i].innerHTML='';
-			games[i].innerText=new_string;
+			if (games[i].children.length === 2){
+				var new_string =games[i].children[0].value;
+				games[i].innerHTML='';
+				games[i].innerText=new_string;
+			}
 		}
 		if(global_target.innerText === "RENAME"){return;}
 		if (global_target.classList.contains('game_list_item')){
