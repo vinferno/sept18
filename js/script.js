@@ -200,7 +200,7 @@ var fu_touch_end = function(event){
 	}
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left');
-		if(global_target.innerText = "rename"){return;};
+		if(global_target.innerText === "rename"){return;};
 		if (global_target.classList.contains('game_list_item')){
 		var new_text_box = document.createElement('input');
 		var new_button = document.createElement('button');
