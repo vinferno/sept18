@@ -216,7 +216,7 @@ var fu_touch_end = function(event){
 				if (games[i].children.length === 2){
 					var new_string =games[i].children[0].value.toUpperCase();
 					games[i].innerHTML='';
-					games[i].innerText=new_string;
+					games[i].innerText=new_string.toUpperCase();
 				}
 			}
 		var new_text_box = document.createElement('input');
