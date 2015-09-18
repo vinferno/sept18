@@ -183,7 +183,7 @@ var fu_mouse_up = function(target){
 var fu_touch_start = function(event){		
 	start_swipe = event.touches[0].pageX;
 	start_swipe_y = event.touches[0].pageY;
-	alert("touchstart");
+	
 }; 
 var fu_touch_end = function(event){
 	end_swipe = event.changedTouches[0].pageX;
@@ -207,7 +207,8 @@ var fu_touch_end = function(event){
 		fu_alert_box();
 		//clearInterval(alert_interval);
 		//global_target.remove(global_target);
-		//this.remove(this);					
+		//this.remove(this);	
+		alert("touchswipe");				
 	}
 	if (start_swipe > end_swipe + threshold){
 		alert('swipe left');
