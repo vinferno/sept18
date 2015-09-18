@@ -31,6 +31,15 @@ var loop_all = function(){
 	submit_listeners();
 };
 
+var fu_minus_click = function(){
+	var minus_list = document.getElementsByClassName('minus');
+	for (i=0;i<minus_list.length;i++){
+		minus_list[i].addEventListener('click',function(){
+			this.parentNode.remove(this.parentNode);
+		})
+	}
+}
+
 var loop_all_remove = function(){
 	for (var i= 0; i < li_list.length; i++){
 		var el = li_list[i],
@@ -66,6 +75,7 @@ function make_minus(target){
 		new_minus.innerText = "-"; 
 		new_minus.classList.add("minus");
 	};
+	fu_minus_click();
 };
 
 function remove_minus(target){
@@ -173,6 +183,7 @@ var fu_mouse_up = function(target){
 var fu_touch_start = function(event){		
 	start_swipe = event.touches[0].pageX;
 	start_swipe_y = event.touches[0].pageY;
+	alert("touchstart");
 }; 
 var fu_touch_end = function(event){
 	end_swipe = event.changedTouches[0].pageX;
@@ -194,12 +205,12 @@ var fu_touch_end = function(event){
 		document.getElementById('alert').classList.remove('hidden');
 		document.getElementById('alert').innerText = "UNDO DELETE: " + global_target.innerText.replace('-','');
 		fu_alert_box();
-		clearInterval(alert_interval);
+		//clearInterval(alert_interval);
 		//global_target.remove(global_target);
 		//this.remove(this);					
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left')
+		alert('swipe left');
 	}
 };
 
@@ -217,7 +228,6 @@ var fu_alert_box = function(){
 };
 
 var fu_undo_check = function(target){
-
 	if (target.id === "alert"){
 		for (i=0;i<li_list.length;i++){
 			if (li_list[i].classList.contains('deleted')){
@@ -226,6 +236,6 @@ var fu_undo_check = function(target){
 		};
 		document.getElementById('alert').innerText = "UNDO SUCCESSFUL";
 	}
-}
+};
 
 alert("version: 0.0.57");
