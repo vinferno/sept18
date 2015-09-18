@@ -158,13 +158,13 @@ var fu_mouse_up = function(target){
 	end_swipe_y= event.clientY;
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
-			alert("crooked fingers");
+			//alert("crooked fingers");
 			alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
-			alert("crooked fingers");
+			//alert("crooked fingers");
 			alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
@@ -176,7 +176,7 @@ var fu_mouse_up = function(target){
 		//global_target.remove(global_target);						
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left')
+		//alert('swipe left')
 	}
 };
 		
@@ -190,13 +190,13 @@ var fu_touch_end = function(event){
 	end_swipe_y = event.changedTouches[0].pageY;
 	if (start_swipe_y < end_swipe_y){
 		if (end_swipe_y - start_swipe_y > y_threshold){
-			alert("crooked fingers");
+			//alert("crooked fingers");
 			alert(end_swipe_y - start_swipe_y);
 		}
 	} 
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
-			alert("crooked fingers");
+			//alert("crooked fingers");
 			alert(start_swipe_y - end_swipe_y)
 		}
 	}       			
@@ -211,7 +211,7 @@ var fu_touch_end = function(event){
 		//alert("touchswipe");				
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left');
+		//alert('swipe left');
 	}
 };
 
@@ -239,4 +239,4 @@ var fu_undo_check = function(target){
 	}
 };
 
-alert("version: 0.0.57");
+//alert("version: 0.0.57");

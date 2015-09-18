@@ -25,10 +25,11 @@ p {
 }
 
 #name_input_box {
-  margin: 0 0 0 40px;
   padding: 0;
   width: 400px;
-  height: 15px;
+  height: 30px;
+  text-align: center;
+  font-size: 23px;
 }
 
 ul {
@@ -169,10 +170,11 @@ p{
   padding:0;
 }
 #name_input_box{
-  margin:0 0 0 40px;
   padding: 15px;
   width: 90%;
   height:15px;
+  text-align: center;
+  font-size: 30px;
 }
 
 
