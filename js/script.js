@@ -201,10 +201,17 @@ var fu_touch_end = function(event){
 	if (start_swipe > end_swipe + threshold){
 		//alert('swipe left');
 		var new_text_box = document.createElement('input');
+		var new_button = document.createElement('button');
 		new_text_box.type = "text";
+		new_button.type = 'submit';
+		new_text_box.id = "rename";
+		new_button.id = 'rename_button';
 		new_text_box.value=global_target.innerText;
+		new_button.innerText = "Rename";
 		global_target.innerText = '';
 		global_target.appendChild(new_text_box);
+		global_target.appendChild(new_button;);
+		
 	}
 };
 var fu_alert_box = function(){
