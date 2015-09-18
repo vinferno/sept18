@@ -39,12 +39,12 @@ ul {
   box-sizing: border-box;
   background-color: black;
   padding: 1px;
-  background-size:100%;
-  background-image:url(http://www.superluigibros.com/images/super_mario_gifs.gif);
+ 
+  
 }
 textNode{flex:none}
 li {
-    
+    background-image:url(http://www.superluigibros.com/images/super_mario_gifs.gif);
   height: 60px;
   width: 500px;
   border: 1px solid black;
